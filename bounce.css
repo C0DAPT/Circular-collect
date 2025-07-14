@@ -1,0 +1,162 @@
+/* ========== GLOBAL RESET ========== */
+body {
+    background: #222;
+    display: grid;
+    place-items: center;
+    margin: auto;
+}
+
+/* ========== CANVAS ========== */
+#canvas {
+    position: absolute;
+    background: #111;
+    border-radius: 5%;
+}
+
+/* ========== MAIN GAME AREA ========== */
+.world {
+    display: grid;
+    place-items: center;
+    height: 600px;
+    width: 600px;
+    background-color: rgba(106, 109, 109, 0.055);
+    overflow: hidden;
+}
+.background{
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 130px;
+    top:35%;
+    background-color: aqua;
+    pointer-events: none
+}
+/* ========== GAME UI STATS BAR ========== */
+.stats {
+    position: absolute;
+    top: 2%;
+    height: 50px;
+    width: 500px;
+}
+
+/* ========== LIGHT EFFECTS ========== */
+.lightbulb {
+    position: relative;
+    width: 500px;
+    top: 0;
+    pointer-events: none;
+}
+
+.light {
+    position: absolute;
+    top: -100px;
+    left: -200px;
+    height: 80px;
+    width: 18px;
+    box-shadow: 200px 0px 100px rgb(255, 254, 251);
+    pointer-events: none;
+}
+
+.light2 {
+    position: absolute;
+    left: 90px;
+    box-shadow: -110px 0px 100px rgb(255, 255, 255);
+}
+
+/* ========== BULB GLOW ========== */
+.bulb {
+    position: absolute;
+    height: 5px;
+    width: 20px;
+    border-radius: 50%;
+    background: rgb(228, 228, 227);
+    box-shadow: 0 -45px 80px rgb(219, 218, 214);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.bulb2 {
+    position: absolute;
+    right: 0;
+}
+
+
+/* Base container */
+.device {
+    position: relative;
+    bottom: 0%;
+    left:5%;
+    width: 200px;
+    height: 120px;
+    pointer-events: none;
+}
+
+/* Top surface of cylinder */
+.top-ellipse {
+    width: 120px;
+    height: 30px;
+    background: radial-gradient(ellipse at center, #fff 60%, #ddd 100%);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 49%;
+    z-index: 2;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Curved front wall of cylinder */
+.front-wall {
+    display: grid;
+    place-items: center;
+    width: 120px;
+    height: 40px;
+    background: linear-gradient(to bottom, #251f1f, #010811);
+    border-bottom-left-radius: 100px 40px;
+    border-bottom-right-radius: 100px 40px;
+    position: absolute;
+    bottom: 30px;
+    z-index: 1;
+    box-shadow:
+        inset 0 -10px 20px rgba(0, 0, 0, 0.4),
+        0 20px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* ========== LIVES / BATTERY DISPLAY ========== */
+.battery {
+    position: relative;
+    top: 10px;
+    display: flex;
+    gap: 2px;
+}
+
+.bar {
+    background-color: rgba(255, 166, 0, 0.219);
+    height: 10px;
+    width: 6px;
+}
+
+/* ========== RELOAD BUTTON ========== */
+.reloadBtn {
+    position: absolute;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: sans-serif;
+    background: #222;
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    display: none;
+}
+
+.reloadBtn:hover {
+    background: white;
+    color: #111;
+    box-shadow: 0 0 10px white;
+}
+
+.show {
+    display: block;
+}

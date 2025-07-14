@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bounce Game</title>
+  <link rel="stylesheet" href="bounce.css" />
+</head>
+<body>
+
+<div class="world">
+<div class="background">
+    <!-- Light and bulbs -->
+    <div class="lightbulb">
+      <div class="bulb">
+        <div class="light"></div>
+      </div>
+      <div class="bulb bulb2">
+        <div class="light light2"></div>
+      </div>
+    </div>
+     <!-- Device (Cylinder visual) -->
+    <div class="device">
+      <div class="top-ellipse"></div>
+      <div class="front-wall">
+        <div class="battery">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+    
+<canvas id="canvas" height="600" width="600~"></canvas>
+
+    <div class="stats">
+      <div id="lives"></div>
+      <div id="score"></div>
+    </div>
+
+    <!-- Restart Button -->
+    <button class="reloadBtn">Restart</button>
+
+</div>
+  <script src="bounce.js"></script>
+
+</body>
+</html>
